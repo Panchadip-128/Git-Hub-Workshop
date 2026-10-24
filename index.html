@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusAgent Studio 2026 — Autonomous AI Workspace & Git Workshop</title>
+  <meta name="description" content="Next-Gen 2026 Autonomous Multi-Agent Workspace, Student Innovation Showcase, and Interactive Git Workshop Hub by Panchadip.">
+
+  <!-- Google Fonts 2026 Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Futuristic Application Header -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <div class="brand-avatar">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title">
+          NexusAgent Studio <span class="brand-tag">2026 Edition</span>
+        </div>
+        <a href="https://github.com/Panchadip-128/Git-Hub-Workshop" target="_blank" class="brand-repo-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          github.com/Panchadip-128/Git-Hub-Workshop
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tab-container">
+      <button class="tab-btn active" onclick="switchMainTab('orchestrator')">
+        <span>🤖</span> Agent Orchestrator
+      </button>
+      <button class="tab-btn" onclick="switchMainTab('showcase')">
+        <span>💡</span> Student Showcase
+      </button>
+      <button class="tab-btn" onclick="switchMainTab('workshop')">
+        <span>🎓</span> Git Workshop Lab
+      </button>
+      <button class="tab-btn" onclick="switchMainTab('intelligence')">
+        <span>📊</span> Repo Intelligence
+      </button>
+    </div>
+
+    <!-- Right Header Actions -->
+    <div class="header-actions">
+      <!-- 2026 Model Selector -->
+      <select class="model-selector" id="model-select">
+        <option value="gemini-flash">Gemini 2.5 Flash Thinking</option>
+        <option value="claude-sonnet">Claude 3.7 Sonnet</option>
+        <option value="deepseek-v3">DeepSeek V3 (Local/Edge)</option>
+        <option value="gpt-5">GPT-5 Turbo</option>
+      </select>
+
+      <!-- Rescue Kit Button -->
+      <button class="btn-push-action" onclick="toggleRescueDrawer(true)" style="background: rgba(244, 63, 94, 0.15); border-color: rgba(244, 63, 94, 0.4); color: #fda4af;">
+        <span>🚨</span> Rescue Kit
+      </button>
+    </div>
+  </header>
+
+  <!-- Shell Container -->
+  <main class="app-shell">
+
+    <!-- ====================================================================
+         VIEW 1: AGENT ORCHESTRATOR PLAYGROUND (2026 Breakthrough)
+         ==================================================================== -->
+    <section class="view-section active" id="view-orchestrator">
+      <div class="hero-banner">
+        <div class="hero-badge-row">
+          <span class="hero-badge">Autonomous Swarm</span>
+          <span class="hero-badge" style="background: rgba(6, 182, 212, 0.15); color: #67e8f9; border-color: rgba(6, 182, 212, 0.3);">Real-Time Reasoning</span>
+          <span class="hero-badge" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.3);">Edge Verified</span>
+        </div>
+        <h1 class="hero-title">Multi-Agent Developer Studio & Autonomous Pipeline</h1>
+        <p class="hero-subtitle">
+          Orchestrate collaborating AI agents to architect, write, audit, and commit production software in seconds. Watch multi-agent reasoning traces live.
+        </p>
+      </div>
+
+      <!-- Agent Cards Swarm -->
+      <div class="agents-grid">
+        <div class="agent-card active-agent" id="agent-archon">
+          <div class="agent-header">
+            <div class="agent-icon" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">🧠</div>
+            <div>
+              <div class="agent-name">Archon</div>
+              <div class="agent-role">System Architecture</div>
+            </div>
+          </div>
+          <p class="agent-desc">Decomposes requirements, drafts architecture schemas, and selects modern edge stacks.</p>
+          <span class="agent-status-pill">● Online (Standby)</span>
+        </div>
+
+        <div class="agent-card" id="agent-forge">
+          <div class="agent-header">
+            <div class="agent-icon" style="background: rgba(6, 182, 212, 0.2); color: #67e8f9;">⚡</div>
+            <div>
+              <div class="agent-name">Forge</div>
+              <div class="agent-role">Full-Stack Engineer</div>
+            </div>
+          </div>
+          <p class="agent-desc">Generates typed TypeScript, WebAssembly micro-kernels, and reactive UI components.</p>
+          <span class="agent-status-pill">● Online (Standby)</span>
+        </div>
+
+        <div class="agent-card" id="agent-aegis">
+          <div class="agent-header">
+            <div class="agent-icon" style="background: rgba(244, 63, 94, 0.2); color: #fda4af;">🛡️</div>
+            <div>
+              <div class="agent-name">Aegis</div>
+              <div class="agent-role">Security & Audit</div>
+            </div>
+          </div>
+          <p class="agent-desc">Audits for CVE vulnerabilities, secret key leaks, and ensures strict zero-trust sandboxing.</p>
+          <span class="agent-status-pill">● Online (Standby)</span>
+        </div>
+
+        <div class="agent-card" id="agent-octogit">
+          <div class="agent-header">
+            <div class="agent-icon" style="background: rgba(168, 85, 247, 0.2); color: #d8b4fe;">🐙</div>
+            <div>
+              <div class="agent-name">OctoGit</div>
+              <div class="agent-role">Repo Intelligence</div>
+            </div>
+          </div>
+          <p class="agent-desc">Automates Git staging, creates atomic commits, checks git diffs, and synthesizes PR reviews.</p>
+          <span class="agent-status-pill">● Online (Standby)</span>
+        </div>
+      </div>
+
+      <!-- Prompt Console -->
+      <div class="prompt-console">
+        <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; margin-bottom: 0.6rem;">
+          Select a 2026 Project Challenge or Enter Prompt:
+        </div>
+        <div class="preset-pills">
+          <button class="preset-pill-btn" onclick="setPresetPrompt('Architect an AI-powered collaborative study group matching app with real-time neural whiteboards')">
+            🎯 StudySync: Collaborative AI Matching
+          </button>
+          <button class="preset-pill-btn" onclick="setPresetPrompt('Build an autonomous Git Pull Request review agent with inline security linting')">
+            🛡️ OctoReview: Autonomous PR Security Linter
+          </button>
+          <button class="preset-pill-btn" onclick="setPresetPrompt('Design a predictive campus canteen smart pre-ordering system with queue telemetry')">
+            🍔 CampusBite: Smart Queue & Telemetry
+          </button>
+          <button class="preset-pill-btn" onclick="setPresetPrompt('Create a local-first vector knowledge graph using on-device WebAssembly SLMs')">
+            🧠 NeuroGraph: Local-First Vector Knowledge
+          </button>
+        </div>
+
+        <div class="input-row">
+          <input type="text" class="prompt-input" id="user-prompt-input" placeholder="Instruct the multi-agent swarm (e.g. 'Build an autonomous agent for...')">
+          <button class="btn-execute" id="btn-run-swarm" onclick="executeAgentSwarm()">
+            <span>⚡ Run Agent Swarm</span>
+          </button>
+        </div>
+
+        <!-- Simulated Streaming Execution Area -->
+        <div class="simulation-display" id="swarm-simulation-display">
+          <div class="stream-header">
+            <div style="font-weight: 700; color: var(--neon-cyan); display: flex; align-items: center; gap: 0.5rem;">
+              <span id="active-agent-label">Archon (Architect) Thinking...</span>
+            </div>
+            <div class="stream-meta">
+              <span>Model: <strong id="stream-model-name">Gemini 2.5 Flash</strong></span>
+              <span>Tokens/sec: <strong style="color: #6ee7b7;">134 tps</strong></span>
+              <span>Time: <strong id="stream-time">0.8s</strong></span>
+            </div>
+          </div>
+
+          <div class="thinking-block" id="stream-thinking-box">
+            &lt;thinking&gt;<br>
+            Decomposing problem statement... Analyzing architecture constraints... Selecting zero-copy edge database and WebSocket synchronization engine.<br>
+            &lt;/thinking&gt;
+          </div>
+
+          <div class="stream-content" id="stream-output-content">
+            <!-- Output dynamically streamed -->
+          </div>
+
+          <div style="margin-top: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;" id="stream-tool-calls">
+            <!-- Tool call pills -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 2: STUDENT PROJECT SHOWCASE (Bento Grid)
+         ==================================================================== -->
+    <section class="view-section" id="view-showcase">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; font-weight: 800;">Student Project Showcase (2026 Collection)</h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Real-world projects and ideas exploring autonomous systems, edge AI, and full-stack software.
+          </p>
+        </div>
+        <button class="btn-execute" onclick="openNewProposalModal()">
+          <span>+ Add Project Proposal</span>
+        </button>
+      </div>
+
+      <div class="bento-grid" id="project-bento-grid">
+        <!-- Project Card 1: NexusAgent Studio -->
+        <div class="project-card">
+          <div class="project-tag-row">
+            <span class="tech-tag">#AgenticAI</span>
+            <span class="tech-tag">#MultiAgent</span>
+            <span class="tech-tag">#TypeScript</span>
+            <span class="tech-tag">#WebAssembly</span>
+          </div>
+          <h3 class="project-title">NexusAgent Studio</h3>
+          <p class="project-desc">
+            An autonomous multi-agent developer environment supporting real-time collaborative reasoning, automated code verification, and native Git repository intelligence.
+          </p>
+          <div class="project-footer">
+            <div class="project-author">
+              <span>👤 Panchadip</span> • <span>Current Workspace</span>
+            </div>
+            <span class="project-branch-tag">branch: main</span>
+          </div>
+        </div>
+
+        <!-- Project Card 2: StudySync AI -->
+        <div class="project-card">
+          <div class="project-tag-row">
+            <span class="tech-tag">#PeerToPeer</span>
+            <span class="tech-tag">#NextJS15</span>
+            <span class="tech-tag">#Supabase</span>
+            <span class="tech-tag">#WebSockets</span>
+          </div>
+          <h3 class="project-title">StudySync AI</h3>
+          <p class="project-desc">
+            A peer-to-peer student study group matching platform that pairs students based on coursework deadlines, skill affinities, and provides real-time neural whiteboards.
+          </p>
+          <div class="project-footer">
+            <div class="project-author">
+              <span>👤 Panchadip</span> • <span>Proposal Verified</span>
+            </div>
+            <span class="project-branch-tag">branch: feature/add-project-details</span>
+          </div>
+        </div>
+
+        <!-- Project Card 3: CampusBite Smart Queue -->
+        <div class="project-card">
+          <div class="project-tag-row">
+            <span class="tech-tag">#PredictiveAI</span>
+            <span class="tech-tag">#IoT</span>
+            <span class="tech-tag">#EdgeFunctions</span>
+          </div>
+          <h3 class="project-title">CampusBite Smart Canteen</h3>
+          <p class="project-desc">
+            Smart pre-ordering canteen app equipped with live queue-time telemetry and predictive preparation alerts to eliminate student lunch rushes.
+          </p>
+          <div class="project-footer">
+            <div class="project-author">
+              <span>👤 Panchadip</span> • <span>Active Idea</span>
+            </div>
+            <span class="project-branch-tag">branch: feature/campus-bite</span>
+          </div>
+        </div>
+
+        <!-- Project Card 4: NeuroGraph Local Vector Notes -->
+        <div class="project-card">
+          <div class="project-tag-row">
+            <span class="tech-tag">#VectorDB</span>
+            <span class="tech-tag">#LocalFirst</span>
+            <span class="tech-tag">#PrivacyAI</span>
+          </div>
+          <h3 class="project-title">NeuroGraph Knowledge Vault</h3>
+          <p class="project-desc">
+            A private, local-first markdown notebook that automatically clusters concepts and builds real-time interactive graph linkages using on-device small language models.
+          </p>
+          <div class="project-footer">
+            <div class="project-author">
+              <span>👤 Panchadip</span> • <span>Under Research</span>
+            </div>
+            <span class="project-branch-tag">branch: feature/neuro-graph</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 3: GIT WORKSHOP LAB (8 Modules & Presenter)
+         ==================================================================== -->
+    <section class="view-section" id="view-workshop">
+      <div class="workshop-container">
+        <!-- Sidebar Navigation -->
+        <aside class="workshop-sidebar">
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700; margin-bottom: 0.85rem;">
+            Workshop Timeline (145m)
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+            <button class="sim-btn" style="text-align: left; padding: 0.6rem 0.8rem; font-size: 0.8rem;" onclick="jumpWorkshopModule(1)">
+              <strong>01.</strong> Opening & Mental Model (15m)
+            </button>
+            <button class="sim-btn" style="text-align: left; padding: 0.6rem 0.8rem; font-size: 0.8rem;" onclick="jumpWorkshopModule(2)">
+              <strong>02.</strong> Environment Setup (15m)
+            </button>
+            <button class="sim-btn" style="text-align: left; padding: 0.6rem 0.8rem; font-size: 0.8rem;" onclick="jumpWorkshopModule(3)">
+              <strong>03.</strong> Create First Repo & README (25m)
+            </button>
+            <button class="sim-btn" style="text-align: left; padding: 0.6rem 0.8rem; font-size: 0.8rem;" onclick="jumpWorkshopModule(4)">
+              <strong>04.</strong> Edit, Diff & .gitignore (20m)
+            </button>
+            <button class="sim-btn" style="text-align: left; padding: 0.6rem 0.8rem; font-size: 0.8rem;" onclick="jumpWorkshopModule(5)">
+              <strong>05.</strong> Publish to GitHub (20m)
+            </button>
+            <button class="sim-btn" style="text-align: left; padding: 0.6rem 0.8rem; font-size: 0.8rem;" onclick="jumpWorkshopModule(6)">
+              <strong>06.</strong> Branch & Pull Request (25m)
+            </button>
+            <button class="sim-btn" style="text-align: left; padding: 0.6rem 0.8rem; font-size: 0.8rem;" onclick="jumpWorkshopModule(7)">
+              <strong>07.</strong> Merge & Sync (15m)
+            </button>
+            <button class="sim-btn" style="text-align: left; padding: 0.6rem 0.8rem; font-size: 0.8rem;" onclick="jumpWorkshopModule(8)">
+              <strong>08.</strong> Solo Challenge & Quiz (15m)
+            </button>
+          </div>
+
+          <div style="margin-top: 1.5rem; padding: 0.85rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--neon-emerald); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-size: 0.8rem;">
+            <strong style="color: #6ee7b7;">Golden Habit:</strong><br>
+            "Whenever you are unsure what Git will do next, run <code>git status</code>!"
+          </div>
+        </aside>
+
+        <!-- Stage Content -->
+        <div class="workshop-stage" id="workshop-module-stage">
+          <!-- Dynamically populated or switchable module content -->
+          <div id="module-content-area">
+            <span class="hero-badge">Module 1 • 15 Minutes</span>
+            <h2 style="font-size: 1.6rem; font-weight: 800; margin: 0.5rem 0 1rem 0;">Opening Explanation & The Core Mental Model</h2>
+            <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              "You edited your assignment, broke something, and wish you could return to yesterday’s working version."
+            </p>
+
+            <!-- 7-Stage Workflow Pipeline -->
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+              <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.75rem;">⚡ 7-Stage Git & GitHub Workflow:</div>
+              <div style="display: flex; gap: 0.5rem; overflow-x: auto; font-size: 0.8rem;">
+                <span class="tech-tag" style="background: rgba(99,102,241,0.2); color: #c7d2fe;">1. Edit files</span> ➔
+                <span class="tech-tag">2. git status / diff</span> ➔
+                <span class="tech-tag" style="background: rgba(245,158,11,0.2); color: #fde68a;">3. git add (Stage)</span> ➔
+                <span class="tech-tag" style="background: rgba(16,185,129,0.2); color: #6ee7b7;">4. git commit</span> ➔
+                <span class="tech-tag" style="background: rgba(168,85,247,0.2); color: #d8b4fe;">5. git push origin</span> ➔
+                <span class="tech-tag" style="background: rgba(6,182,212,0.2); color: #67e8f9;">6. Open PR</span> ➔
+                <span class="tech-tag" style="background: rgba(16,185,129,0.2); color: #6ee7b7;">7. Merge & git pull</span>
+              </div>
+            </div>
+
+            <!-- The 3 Pillars -->
+            <div style="margin-top: 1rem;">
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">The 3 Pillars of Code History</h3>
+              <ul style="padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong>Saving (Ctrl+S):</strong> Writes your edits to your laptop's disk. (Pencil draft)</li>
+                <li><strong>Committing (git commit):</strong> Creates a permanent, dated checkpoint in your local repository. (Polaroid photo)</li>
+                <li><strong>Pushing (git push):</strong> Uploads your checkpoints to the cloud repository on GitHub. (Sharing album with the team)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 4: REPO INTELLIGENCE & COMMIT GRAPH
+         ==================================================================== -->
+    <section class="view-section" id="view-intelligence">
+      <div class="repo-intelligence-grid">
+        <!-- SVG Commit Graph -->
+        <div class="dag-canvas-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <div style="font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>🌲</span> Interactive Commit Tree (DAG)
+            </div>
+            <span class="project-branch-tag" id="dag-head-indicator">HEAD -> main</span>
+          </div>
+
+          <div class="dag-svg-box">
+            <svg id="live-dag-svg" width="100%" height="280" viewBox="0 0 380 280">
+              <!-- Rendered via JavaScript -->
+            </svg>
+          </div>
+        </div>
+
+        <!-- Terminal Sandbox & Controls -->
+        <div class="dag-canvas-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--neon-cyan);">
+              💻 Live Terminal Sandbox
+            </div>
+            <button style="background: none; border: none; color: var(--text-dim); font-size: 0.75rem; cursor: pointer;" onclick="clearDagTerminal()">Clear</button>
+          </div>
+
+          <div style="flex: 1; background: #03060c; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; font-family: var(--font-mono); font-size: 0.8rem; overflow-y: auto; max-height: 220px;" id="dag-terminal-output">
+            <div style="color: #64748b;">$ git status</div>
+            <div style="color: #94a3b8;">On branch main<br>Your branch is up to date with 'origin/main'.<br>nothing to commit, working tree clean</div>
+          </div>
+
+          <!-- Sandbox Buttons -->
+          <div style="margin-top: 1rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+            <button class="sim-btn" onclick="dagRunCommand('git status')">git status</button>
+            <button class="sim-btn" onclick="dagRunCommand('git diff')">git diff</button>
+            <button class="sim-btn" onclick="dagRunCommand('git commit -m &quot;New Snapshot&quot;')">git commit</button>
+            <button class="sim-btn" onclick="dagRunCommand('git switch -c feature/add-project-details')">git switch -c</button>
+            <button class="sim-btn" onclick="dagRunCommand('git merge feature/add-project-details')">git merge</button>
+            <button class="sim-btn" style="color: #fda4af;" onclick="dagResetTree()">Reset Tree</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal: Create New Proposal -->
+  <div class="modal-overlay" id="proposal-modal">
+    <div class="modal-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <h3 style="font-size: 1.3rem; font-weight: 700;">Submit 2026 Project Proposal</h3>
+        <button style="background: none; border: none; color: var(--text-dim); font-size: 1.2rem; cursor: pointer;" onclick="closeNewProposalModal()">✕</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Project Name</label>
+        <input type="text" class="form-input" id="prop-name" placeholder="e.g. QuantumKey Protocol">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Problem Statement</label>
+        <textarea class="form-textarea" rows="2" id="prop-problem" placeholder="What student or real-world problem does this solve?"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Proposed 2026 Architecture & Solution</label>
+        <textarea class="form-textarea" rows="3" id="prop-solution" placeholder="How does it work? What AI models or edge protocols will you leverage?"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Tech Stack Tags (Comma separated)</label>
+        <input type="text" class="form-input" id="prop-tags" placeholder="e.g. #WebAssembly, #EdgeAI, #NextJS">
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+        <button class="sim-btn" onclick="closeNewProposalModal()">Cancel</button>
+        <button class="btn-execute" onclick="submitProjectProposal()">Save to Showcase & Generate Markdown</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rescue Kit Drawer -->
+  <aside class="rescue-drawer" id="rescue-drawer" style="position: fixed; top: 0; right: -550px; width: 500px; max-width: 90vw; height: 100vh; background: #0b111e; border-left: 1px solid var(--neon-rose); z-index: 1000; box-shadow: -10px 0 35px rgba(0,0,0,0.8); display: flex; flex-direction: column; transition: right 0.35s ease;">
+    <div style="padding: 1.25rem 1.5rem; background: rgba(244, 63, 94, 0.15); border-bottom: 1px solid rgba(244, 63, 94, 0.3); display: flex; justify-content: space-between; align-items: center;">
+      <h3 style="color: #fda4af; font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+        <span>🚨</span> Instructor Rescue Kit (Vim & Fixes)
+      </h3>
+      <button style="background: none; border: none; color: #fda4af; font-size: 1.3rem; cursor: pointer;" onclick="toggleRescueDrawer(false)">✕</button>
+    </div>
+
+    <div style="padding: 1.5rem; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 1.25rem;">
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+        <h4 style="color: #fda4af; font-size: 0.95rem; margin-bottom: 0.4rem;">1. Help! Trapped in Vim editor</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.4rem;">Ran <code>git commit</code> without <code>-m</code> flag.</p>
+        <div style="background: #04070d; padding: 0.6rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.8rem; color: #67e8f9;">
+          1. Press Esc key<br>
+          2. Type :wq and press Enter (save & exit)<br>
+          3. Or type :q! and press Enter to abort
+        </div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+        <h4 style="color: #fda4af; font-size: 0.95rem; margin-bottom: 0.4rem;">2. Accidental git add of wrong file</h4>
+        <div style="background: #04070d; padding: 0.6rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.8rem; color: #67e8f9;">
+          git restore --staged &lt;file&gt;
+        </div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+        <h4 style="color: #fda4af; font-size: 0.95rem; margin-bottom: 0.4rem;">3. Push rejected (Conflicting remote README)</h4>
+        <div style="background: #04070d; padding: 0.6rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.8rem; color: #67e8f9;">
+          git pull --rebase origin main<br>
+          git push origin main
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
