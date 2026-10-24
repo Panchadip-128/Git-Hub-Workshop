@@ -24,7 +24,7 @@ Launch `index.html` directly in any web browser to explore:
 4. **📊 Repo Intelligence:** Real-time commit tree DAG graph and live terminal emulator.
 
 ---
-
+session outline & topic - time distribution 
 ## Hands-On Git Workshop Outline
 This repository is configured for our live 8-module hands-on workshop:
 1. **Opening Explanation (15m):** The 6 core terms, saving vs. committing vs. pushing, and the 7-stage workflow pipeline.
