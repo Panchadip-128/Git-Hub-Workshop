@@ -1,6 +1,8 @@
 # Student Project Showcase: NexusAgent Studio (2026 Edition)
 A collection of projects and ideas I am exploring.
 
+> 📖 **Complete Workshop Documentation & Commands:** Read our beginner-friendly [**Git & GitHub Master Handbook**](GIT_COMMANDS_HANDBOOK.md) for full command explanations, cheat sheets, and rescue guides.
+
 ## About me
 Name: Panchadip  
 Interest: Autonomous Multi-Agent AI Systems, Edge Computing, and Full-Stack Architecture  
@@ -22,7 +24,7 @@ Launch `index.html` directly in any web browser to explore:
 4. **📊 Repo Intelligence:** Real-time commit tree DAG graph and live terminal emulator.
 
 ---
-
+session outline & topic - time distribution 
 ## Hands-On Git Workshop Outline
 This repository is configured for our live 8-module hands-on workshop:
 1. **Opening Explanation (15m):** The 6 core terms, saving vs. committing vs. pushing, and the 7-stage workflow pipeline.
