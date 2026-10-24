@@ -1,6 +1,8 @@
 # Student Project Showcase: NexusAgent Studio (2026 Edition)
 A collection of projects and ideas I am exploring.
 
+> 📖 **Complete Workshop Documentation & Commands:** Read our beginner-friendly [**Git & GitHub Master Handbook**](GIT_COMMANDS_HANDBOOK.md) for full command explanations, cheat sheets, and rescue guides.
+
 ## About me
 Name: Panchadip  
 Interest: Autonomous Multi-Agent AI Systems, Edge Computing, and Full-Stack Architecture  
