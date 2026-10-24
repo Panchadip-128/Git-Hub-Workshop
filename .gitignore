@@ -1,0 +1,25 @@
+# ==============================================================================
+# Git Ignore Configuration — NexusAgent Studio & Workshop
+# ==============================================================================
+
+# Private local notes & secret scratchpads (Workshop Module 4 Demo)
+notes.local.txt
+*.local.txt
+
+# Environment secrets and credentials
+.env
+.env.local
+*.env
+
+# Local development logs and caches
+*.log
+.cache/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE configs
+.vscode/
+.idea/
